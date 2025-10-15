@@ -107,10 +107,6 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-accent" />
-                Free 14-day trial
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-accent" />
                 Cancel anytime
               </div>
             </div>
