@@ -1,66 +1,92 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ClinicHub — Dental Practice Management Software | Appointments, Billing & Patient Recalls</title>
+  <title>ClinicHub — Dental Practice Management Software</title>
 
-    <!-- Basic SEO -->
-    <meta name="description" content="ClinicHub is modern dental practice management software for clinics and solo dentists. Schedule appointments, automate WhatsApp reminders, manage billing and recalls, track chair/room usage, and improve patient retention." />
-    <meta name="keywords" content="ClinicHub, dental software, dental clinic software, dental practice management, appointment scheduling, patient recalls, dental billing, WhatsApp reminders, clinic management software" />
-    <meta name="author" content="Hassan Kashakesh" />
-    <meta name="robots" content="index,follow" />
-    <meta name="application-name" content="ClinicHub" />
-    <meta name="theme-color" content="#0ea5e9" />
+  <!-- SEO -->
+  <meta name="description" content="ClinicHub is modern dental practice management software for clinics and solo dentists. Schedule appointments, automate WhatsApp reminders, manage billing and recalls, and track chair/room usage." />
+  <meta name="author" content="Hassan Kashakesh" />
+  <meta name="robots" content="index,follow" />
+  <meta name="application-name" content="ClinicHub" />
+  <meta name="theme-color" content="#0ea5e9" />
 
-    <!-- Canonical -->
-    <link rel="canonical" href="https://clinichub.life/" />
+  <!-- Canonical (choose one primary domain and stick to it) -->
+  <link rel="canonical" href="https://clinichub.life/" />
 
-    <!-- Favicons -->
-    <link rel="icon" href="/logo.ico?v=1" type="image/x-icon" sizes="any" />
-    <!-- Optional PNG fallbacks (keep only if you also have these in /public) -->
-    <!-- <link rel="icon" type="image/png" sizes="32x32" href="/logo-32.png?v=1" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/logo-16.png?v=1" /> -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1" />
+  <!-- Favicons -->
+  <link rel="icon" href="/logo.ico?v=1" type="image/x-icon" sizes="any" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1" />
 
-    <!-- Open Graph (social sharing) -->
-    <meta property="og:title" content="ClinicHub — Dental Practice Management Software" />
-    <meta property="og:description" content="Appointments, billing, recalls, and automated WhatsApp reminders—everything your dental clinic needs in one place." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://clinichub.life/" />
-    <meta property="og:site_name" content="ClinicHub" />
-    <meta property="og:image" content="https://clinichub.life/logo.png" />
+  <!-- Preload key assets -->
+  <link rel="preload" as="image" href="/logo.png" fetchpriority="high" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ClinicHub — Dental Practice Management Software" />
-    <meta name="twitter:description" content="Modern dental clinic management for busy dentists: appointments, billing, recalls, and WhatsApp reminders." />
-    <meta name="twitter:image" content="https://clinichub.life/logo.png" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="ClinicHub — Dental Practice Management Software" />
+  <meta property="og:description" content="Appointments, billing, recalls, and automated WhatsApp reminders—everything your dental clinic needs in one place." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://clinichub.life/" />
+  <meta property="og:site_name" content="ClinicHub" />
+  <meta property="og:image" content="https://clinichub.life/logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en" />
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ClinicHub — Dental Practice Management Software" />
+  <meta name="twitter:description" content="Modern dental clinic management for busy dentists: appointments, billing, recalls, and WhatsApp reminders." />
+  <meta name="twitter:image" content="https://clinichub.life/logo.png" />
+  <!-- <meta name="twitter:site" content="@yourhandle"> -->
 
-    <!-- Structured data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "ClinicHub",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "Dental practice management software for scheduling, billing, recalls, and automated WhatsApp reminders.",
-      "creator": { "@type": "Person", "name": "Hassan Kashakesh" },
-      "url": "https://clinichub.life/",
-      "image": "https://clinichub.life/logo.png"
+  <!-- Manifest (PWA) -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ClinicHub",
+    "url": "https://clinichub.life/",
+    "logo": "https://clinichub.life/logo.png",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ClinicHub",
+    "url": "https://clinichub.life/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://clinichub.life/search?q={query}",
+      "query-input": "required name=query"
     }
-    </script>
-  </head>
-
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"ClinicHub",
+    "applicationCategory":"BusinessApplication",
+    "operatingSystem":"Web",
+    "description":"Dental practice management software for scheduling, billing, recalls, and automated WhatsApp reminders.",
+    "creator": { "@type": "Person", "name": "Hassan Kashakesh" },
+    "url":"https://clinichub.life/",
+    "image":"https://clinichub.life/logo.png"
+  }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
 </html>
