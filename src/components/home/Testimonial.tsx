@@ -14,7 +14,7 @@ const Testimonial = () => {
             {/* Testimonial Content */}
             <blockquote className="mt-4 space-y-6">
               <p className="text-xl md:text-2xl text-foreground leading-relaxed">
-                "Clinic Hub has transformed how we run our clinic. The WhatsApp reminders have reduced our no-shows by 35%. Our team loves how intuitive it is, and our patients appreciate the professional communication."
+                “ClinicHub has truly simplified my daily workflow. Unlike other medical software I’ve used, it’s refreshingly straightforward and easy to navigate. I find it incredibly helpful in managing appointments and patient information without unnecessary complications. It’s friendly, efficient, and thoughtfully designed for doctors. I’m very happy with my experience and would strongly recommend ClinicHub to all fellow doctors.”
               </p>
 
               <footer className="flex items-center gap-4 pt-4 border-t border-border">
@@ -22,8 +22,8 @@ const Testimonial = () => {
                   DS
                 </div>
                 <div>
-                  <div className="font-semibold text-foreground">Dr. Sarah Martinez</div>
-                  <div className="text-sm text-muted-foreground">Founder, Bright Smile Dental Clinic</div>
+                  <div className="font-semibold text-foreground">Dr. Bilal Dabaja</div>
+                  <div className="text-sm text-muted-foreground">Founder of Dabaja OralCare</div>
                 </div>
               </footer>
             </blockquote>

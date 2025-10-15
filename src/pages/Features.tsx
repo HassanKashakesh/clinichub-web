@@ -20,15 +20,15 @@ const featureDetails = [
   },
   {
     icon: MessageSquare,
-    title: "WhatsApp Reminders",
-    description: "Automated patient communication that reduces no-shows and improves retention.",
+    title: "Manual WhatsApp Reminders",
+    description: "One-tap WhatsApp messages sent by your staff to reduce no-shows and improve retention.",
     features: [
-      "24-hour appointment reminders",
-      "No-show follow-up messages",
-      "6-month recall notifications",
-      "Custom message templates",
-      "Two-way messaging support",
-      "Delivery confirmation tracking",
+      "Quick send from patient profile or schedule",
+      "Editable reminder & follow-up templates",
+      "Pre-filled message with appointment details",
+      "Supports recalls and post-visit follow-ups",
+      "Works with WhatsApp on phone or desktop",
+      "Respect patient opt-out preferences",
     ],
   },
   {
@@ -51,7 +51,7 @@ const featureDetails = [
     features: [
       "Payment recording and receipts",
       "Outstanding balance tracking",
-      "Payment reminder automation",
+      "Payment reminder support (manual via WhatsApp)",
       "Multiple payment methods",
       "Installment plan support",
       "Financial reports generation",
@@ -107,6 +107,9 @@ const additionalFeatures = [
     description: "Industry-standard encryption and role-based access control.",
   },
 ];
+
+const whatsappHref =
+  "https://wa.me/96171292796?text=Hi%20Clinic%20Hub!%20I%E2%80%99d%20like%20to%20see%20how%20it%20works%20and%20get%20started.";
 
 const Features = () => {
   return (
@@ -231,19 +234,19 @@ const Features = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* CTA Section (Calendly -> WhatsApp) */}
         <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-8">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
                 See Clinic Hub in Action
               </h2>
-              <p className="text-lg md:text-xl text-muted-foreground">
-                Book a personalized demo and discover how Clinic Hub can transform your practice.
+              <p className="text-lg md:text-xl opacity-90">
+                Chat with us on WhatsApp and we’ll walk you through how Clinic Hub can transform your practice.
               </p>
               <Button size="lg" variant="secondary" asChild>
-                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                  Book a Free Demo
+                <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
+                  Chat on WhatsApp
                 </a>
               </Button>
             </div>

@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 
 const plan = {
   name: "Lifetime Access",
-  price: "$450",
+  price: "$399",
   description: "One-time payment for unlimited lifetime access",
   features: [
     "Unlimited patients",
@@ -15,7 +15,7 @@ const plan = {
     "Payment tracking",
     "Analytics dashboard",
     "Lifetime updates",
-    "Email support",
+    "WhatsApp support",
   ],
 };
 

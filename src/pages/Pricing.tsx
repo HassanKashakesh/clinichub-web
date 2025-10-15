@@ -8,10 +8,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import FinalCTA from "@/components/home/FinalCTA"; // <-- Use your FinalCTA widget
 
 const plan = {
   name: "Lifetime Access",
-  price: "$450",
+  price: "$399", // <-- updated
   period: "one-time",
   description: "Pay once, use forever. Complete dental practice management.",
   popular: true,
@@ -35,39 +36,45 @@ const plan = {
 const faqs = [
   {
     question: "How do WhatsApp reminders work?",
-    answer: "WhatsApp reminders are sent manually by your dental assistant. They can click the WhatsApp icon next to any patient to send appointment reminders, follow-ups, or recall messages directly through WhatsApp.",
+    answer:
+      "WhatsApp reminders are sent manually by your dental assistant. They can click the WhatsApp icon next to any patient to send appointment reminders, follow-ups, or recall messages directly through WhatsApp.",
   },
   {
     question: "Is my patient data secure?",
-    answer: "Yes. We use industry-standard encryption (AES-256) for data at rest and in transit. We employ role-based access control, regular security audits, and comply with data protection regulations. Your data is backed up daily.",
+    answer:
+      "Yes. We use industry-standard encryption (AES-256) for data at rest and in transit. We employ role-based access control, regular security audits, and comply with data protection regulations. Your data is backed up daily.",
   },
   {
     question: "Are there any limits on patients or staff?",
-    answer: "No. With the lifetime access plan, you get unlimited patients and unlimited dentist accounts. There are no artificial limits on your practice's growth.",
+    answer:
+      "No. With the lifetime access plan, you get unlimited patients and unlimited dentist accounts. There are no artificial limits on your practice's growth.",
   },
-  {
-    question: "Do you offer refunds?",
-    answer: "Yes. If you're not satisfied within the first 30 days, we'll provide a full refund, no questions asked.",
-  },
+  // Removed refunds FAQ per your request
   {
     question: "Can I use Clinic Hub on mobile devices?",
-    answer: "Yes! Clinic Hub has a fully responsive web interface that works great on tablets and phones.",
+    answer:
+      "Yes! Clinic Hub has a fully responsive web interface that works great on tablets and phones.",
   },
   {
     question: "What kind of support do you provide?",
-    answer: "All users receive email support with responses within 24 hours. We're here to help you get the most out of Clinic Hub.",
+    answer:
+      "All users receive email support with responses within 24 hours. We're here to help you get the most out of Clinic Hub.",
   },
   {
     question: "Will I have to pay again for updates?",
-    answer: "No. Your one-time payment includes lifetime access to all future updates and improvements. You'll never be charged again.",
+    answer:
+      "No. Your one-time payment includes lifetime access to all future updates and improvements. You'll never be charged again.",
   },
 ];
+
+const whatsappHref =
+  "https://wa.me/96171292796?text=Hi%20Clinic%20Hub!%20I%E2%80%99d%20like%20to%20get%20Lifetime%20Access%20(%24399).";
 
 const Pricing = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       <main className="flex-1">
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-background to-secondary/20 pt-24 pb-16 md:pt-32 md:pb-20">
@@ -113,24 +120,18 @@ const Pricing = () => {
                   ))}
                 </ul>
 
-                <Button
-                  className="w-full"
-                  size="lg"
-                  variant="default"
-                  asChild
-                >
-                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
+                {/* Get Started -> WhatsApp */}
+                <Button className="w-full" size="lg" variant="default" asChild>
+                  <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
                     {plan.cta}
                   </a>
                 </Button>
               </div>
             </div>
 
-            {/* Additional Info */}
+            {/* Additional Info (removed money-back guarantee) */}
             <div className="mt-16 text-center space-y-4">
-              <p className="text-lg text-muted-foreground">
-                30-day money-back guarantee. No questions asked.
-              </p>
+              {/* Removed: 30-day money-back guarantee */}
               <p className="text-sm text-muted-foreground">
                 Have questions?{" "}
                 <a href="mailto:hello@clinichub.com" className="text-primary hover:underline">
@@ -178,34 +179,8 @@ const Pricing = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 md:py-28 bg-gradient-to-br from-primary to-primary/80 text-primary-foreground">
-          <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto text-center space-y-8">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg md:text-xl opacity-90">
-                Get lifetime access to Clinic Hub today. One payment, unlimited value.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 justify-center">
-                <Button size="lg" variant="secondary" asChild>
-                  <a href="https://calendly.com" target="_blank" rel="noopener noreferrer">
-                    Get Started
-                  </a>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
-                  asChild
-                >
-                  <a href="mailto:hello@clinichub.com">Contact Us</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* Replace CTA section with FinalCTA widget */}
+        <FinalCTA />
       </main>
 
       <Footer />

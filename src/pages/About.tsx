@@ -4,10 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, MapPin, Phone, Github, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle, Instagram } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import devImg from "@/assets/devimg.png";
+import { motion } from "framer-motion";
+import logo from "@/assets/logo.png";
 
 type FormData = {
   name: string;
@@ -78,6 +80,27 @@ const About = () => {
         <section className="bg-gradient-to-b from-background to-secondary/20 pt-24 pb-16 md:pt-32 md:pb-20">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
+              {/* Animated Logo */}
+              <motion.img
+                src={logo}
+                alt="ClinicHub logo"
+                className="h-16 w-16 md:h-20 md:w-20 mx-auto rounded-xl ring-8 ring-primary/10 shadow-xl"
+                initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                animate={{
+                  opacity: 1,
+                  y: [0, -6, 0],
+                  rotate: [0, 2, 0],
+                  scale: 1,
+                }}
+                transition={{
+                  duration: 0.8,
+                  rotate: { delay: 0.6, duration: 6, repeat: Infinity, ease: "easeInOut" },
+                  y: { delay: 0.6, duration: 6, repeat: Infinity, ease: "easeInOut" },
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              />
+
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
                 About{" "}
                 <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
@@ -113,15 +136,15 @@ const About = () => {
                     easy to follow, and analytics that help you grow.
                   </p>
                   <p>
-                    Today, we're proud to serve hundreds of dental practices, helping them save time,
+                    Today, we're proud to serve many dental practices, helping them save time,
                     reduce no-shows, and focus on what they do best—providing exceptional patient care.
                   </p>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">
-                <Stat value="500+" label="Active Practices" />
-                <Stat value="50K+" label="Appointments Managed" />
+                <Stat value="10+" label="Active Practices" />
+                <Stat value="2000+" label="Appointments Managed" />
                 <Stat value="35%" label="Average No-Show Reduction" accent />
               </div>
             </div>
@@ -171,32 +194,37 @@ const About = () => {
           </div>
         </section>
 
-        {/* Developer Section */}
+        {/* Developer Section (prominent like the hero) */}
         <section className="py-20 md:py-28 bg-background">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto space-y-8 animate-fade-in text-center">
-              <h2 className="text-3xl font-bold">About the Developer</h2>
+            <div className="max-w-4xl mx-auto space-y-8 animate-fade-in text-center">
+              <h2 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+                About{" "}
+                <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                  the Developer
+                </span>
+              </h2>
 
-              <div className="mx-auto max-w-xl rounded-2xl border border-border bg-card p-8 shadow-sm">
+              <div className="mx-auto max-w-2xl rounded-2xl border border-border bg-card p-10 shadow-sm">
                 <div className="flex flex-col items-center">
                   <img
                     src={devImg}
                     alt="Hassan Kashakesh"
-                    className="h-28 w-28 rounded-full object-cover ring-4 ring-primary/20 shadow-sm"
+                    className="h-36 w-36 rounded-full object-cover ring-4 ring-primary/20 shadow-sm"
                   />
-                  <h3 className="mt-4 text-2xl font-bold">Hassan Kashakesh</h3>
+                  <h3 className="mt-5 text-3xl font-bold">Hassan Kashakesh</h3>
 
-                  <div className="mt-3 flex flex-wrap items-center justify-center gap-2">
+                  <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
                     <Badge>🇱🇧 Lebanese</Badge>
                     <Badge>🎓 Fresh Graduate</Badge>
                     <Badge>📱 Flutter Developer</Badge>
                   </div>
 
-                  <p className="mt-4 text-muted-foreground leading-relaxed">
+                  <p className="mt-5 text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
                     Building ClinicHub to revolutionize clinic management in Lebanon with modern technology.
                   </p>
 
-                  <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  <div className="mt-7 flex flex-wrap justify-center gap-3">
                     <Button asChild variant="secondary">
                       <a
                         href="https://wa.me/96171292796?text=Hi%20Hassan,%20about%20ClinicHub..."
@@ -212,14 +240,14 @@ const About = () => {
 
                     <Button asChild variant="secondary">
                       <a
-                        href="https://github.com/HassanKashakesh"
+                        href="https://www.instagram.com/hassankashakesh313?igsh=MTJwZzgwdTk2Zmtodg%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
-                        aria-label="GitHub"
+                        aria-label="Instagram"
                         className="inline-flex items-center gap-2"
                       >
-                        <Github className="h-4 w-4" />
-                        GitHub
+                        <Instagram className="h-4 w-4" />
+                        Instagram
                       </a>
                     </Button>
 
@@ -263,8 +291,8 @@ const About = () => {
                       icon={<Mail className="h-6 w-6 text-primary" />}
                       title="Email"
                       content={
-                        <a href="mailto:hello@clinichub.com" className="text-primary hover:underline">
-                          hello@clinichub.com
+                        <a href="mailto:HassanKashakesh313@gmail.com" className="text-primary hover:underline">
+                          HassanKashakesh313@gmail.com
                         </a>
                       }
                       iconBg="bg-primary/10"
@@ -289,9 +317,9 @@ const About = () => {
                       title="Office"
                       content={
                         <p className="text-muted-foreground">
-                          San Francisco, CA
+                          Beirut
                           <br />
-                          United States
+                          Lebanon
                         </p>
                       }
                       iconBg="bg-primary/10"

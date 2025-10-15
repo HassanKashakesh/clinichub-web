@@ -145,8 +145,16 @@ const Privacy = () => {
                     If you have any questions about this Privacy Policy or our data practices, please contact us:
                   </p>
                   <div className="pl-4 space-y-1 text-muted-foreground">
-                    <p>Email: privacy@clinichub.com</p>
-                    <p>Address: Clinic Hub, San Francisco, CA, United States</p>
+                    <p>
+                      Email:{" "}
+                      <a
+                        href="mailto:HassanKashakesh313@gmail.com"
+                        className="text-primary underline underline-offset-2"
+                      >
+                        HassanKashakesh313@gmail.com
+                      </a>
+                    </p>
+                    <p>Address: ClinicHub, Beirut, Lebanon</p>
                   </div>
                 </div>
 
